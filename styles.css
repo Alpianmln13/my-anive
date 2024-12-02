@@ -1,0 +1,213 @@
+/* styles.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #ff9a9e, #fad0c4, #fbc2eb);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-align: center; /* Meratakan teks ke tengah */
+}
+
+.header {
+    text-align: center; /* Pastikan header tetap rata tengah */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.header h1 {
+    font-size: 3rem;
+    color: #d9005d;
+    margin: 0;
+    animation: glow 3s infinite, bounceText 2s infinite alternate;
+}
+
+.header p {
+    font-size: 1.5rem;
+    color: #555;
+    animation: fadeInText 2s 0.5s forwards;
+}
+
+.main-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: pulse 4s infinite;
+    display: block; /* Menambahkan display block untuk memastikan gambar bisa diatur tengah */
+    margin-left: auto;
+    margin-right: auto; /* Menambahkan aturan ini untuk meratakan gambar ke tengah */
+}
+
+.intro p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    animation: slideIn 2s ease-out;
+}
+
+.gallery h2 {
+    color: #d9005d;
+    margin-bottom: 20px;
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+    justify-items: center; /* Menambahkan ini untuk meratakan gambar di dalam grid */
+}
+
+.photo-grid img {
+    width: 100%;
+    max-width: 300px; /* Menambahkan ukuran maksimal gambar agar tidak terlalu besar */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: rotateIn 2s ease-in-out;
+}
+
+.gallery {}
+
+.photo-grid img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.love-letter h2 {
+    color: #d9005d;
+    margin-bottom: 15px;
+    animation: popIn 2s ease-in-out;
+}
+
+.love-letter p {
+    line-height: 1.8;
+    text-align: center; /* Meratakan teks dalam love-letter */
+    margin: 0 auto;
+    max-width: 800px;
+    font-size: 1.1rem;
+    animation: fadeInText 2s 0.5s forwards;
+}
+
+.footer {
+    text-align: center; /* Footer tetap rata tengah */
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.footer .animated-text {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    color: #d9005d;
+    animation: floatText 3s infinite ease-in-out;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 15px #ff80c0, 0 0 30px #d9005d, 0 0 45px #ff6080;
+    }
+    50% {
+        text-shadow: 0 0 30px #d9005d, 0 0 45px #ff6080, 0 0 60px #ff90a0;
+    }
+}
+
+@keyframes bounceText {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-360deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatText {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
